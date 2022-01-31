@@ -26,8 +26,8 @@ class ArenaScheduler extends Task
 
 	public function onRun(): void
 	{
-		$this->startTime--;
 		if (array_filter($this->arena->getTeams(), function (Team $team) {
+				$this->startTime--;
 				return count($this->arena->getPlayers()) > $team->getMaxPlayers();
 			})) {
 			if ($this->startTime < 1) {
