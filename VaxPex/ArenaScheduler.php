@@ -33,8 +33,6 @@ class ArenaScheduler extends Task
 			if ($this->startTime < 1) {
 				$this->plugin->startArena($this->arena);
 			}
-		}else{
-			echo "no";
 		}
 	}
 }
